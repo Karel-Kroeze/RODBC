@@ -740,7 +740,7 @@ static int cachenbind(pRODBCHandle thisHandle, int nRows)
 	    /* sanity check as the reports are sometimes unreliable */
 	    /* because hard-coded, undocumented sanity checks are a GREAT FUCKING IDEA. Thanks for that.
 	       - Karel */
-	    if (datalen > 65535) datalen = 6553500
+	    if (datalen > 65535) datalen = 16776960;
 	    thisHandle->ColData[i].pData =
 		Calloc(nRows * (datalen + 1), char);
 	    thisHandle->ColData[i].datalen = datalen;
